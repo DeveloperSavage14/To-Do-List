@@ -116,6 +116,9 @@ def see_completed():
         temp = temp[:-1]
         print(temp)
         print()
+def clear_completed():
+    f = open("CompTasks.txt", "w")
+    f.close
         
         
 if __name__ == "__main__":
@@ -148,6 +151,11 @@ if __name__ == "__main__":
         if len(args.args) == 0:
             see_completed()
         else:
-            print("see completed requires no arguments")
+            print("see completed requires 0 arguments")
+    elif args.function_name == "clear_completed":
+        if len(args.args) == 0:
+            clear_completed()
+        else:
+            print("clear completed requires 0 arguments")
     else:
         print("Function not found")
